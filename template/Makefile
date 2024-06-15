@@ -5,6 +5,7 @@ install:
 	@echo ">> Installing dependencies"
 	@python -m pip install --upgrade pip
 	@python -m pip install -e .
+	@echo ">> Successfully installed! `{{ python_package_name }} --help`"
 
 ## Install for development
 install-dev: install

@@ -8,7 +8,7 @@ logger = get_logger(__name__)
 cli = typer.Typer(add_completion=False)
 
 
-@cli.command()
+@cli.command(help="{{ project_description }}")
 def hello_world(
     name: Annotated[str, typer.Option(help="Your name.")] = "World",
 ) -> str:
