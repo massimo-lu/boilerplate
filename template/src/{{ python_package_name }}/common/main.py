@@ -4,7 +4,7 @@ from typing_extensions import Annotated
 
 from {{ python_package_name }}.common.utils import get_logger
 
-logger = get_logger(__name__)
+logger = get_logger()
 cli = typer.Typer(add_completion=False)
 
 
