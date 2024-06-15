@@ -1,13 +1,13 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "{{python_package_name}}"
-version = "0.0.0"
 readme = "README.md"
 description = "{{ project_description }}"
 requires-python = ">=3.8"
+dynamic = ["version"]
 dependencies = [
   "fastapi>=0.88.0",
   "uvicorn>=0.20.0",
@@ -44,7 +44,7 @@ select = [
   "PIE", "PLC", "PLE", "PLW", "Q",
   "RET", "RSE", "SIM", "TRY", "UP", "W"
 ]
-line-length = 79
+line-length = 120
 exclude = [".env", ".venv", "venv", "notebooks"]
 show-source = false
 
@@ -66,5 +66,5 @@ relative_files = true
 show_missing = true
 fail_under = 80
 
-[tool.hatch.metadata]
-allow-direct-references = true
+[tool.setuptools_scm]
+version_file = "src/__about__.py"
