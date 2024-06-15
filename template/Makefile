@@ -29,7 +29,7 @@ clean:
 
 ## Format files using Ruff
 format:
-	@ruff . --fix
+	@ruff check . --fix
 	@ruff format .
 
 ## Run tests

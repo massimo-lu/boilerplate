@@ -4,7 +4,7 @@ COPY requirements.txt pyproject.toml ./
 COPY Makefile README.md  ./
 COPY src/ src/
 
-RUN python -m pip install --upgrade pip && \ 
+RUN python -m pip install --upgrade pip && \
 	python -m pip install -r requirements.txt --no-cache-dir && \
 	python -m pip install . --no-cache-dir 
 
